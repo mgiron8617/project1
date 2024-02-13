@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: NYT;
+    src: url('fonts/Chomsky.otf');
+}
+
+body {
+    margin: 0% 8% 0% 8%;
+}
+
+
+
+/* ---------- */
+/*   header   */
+/* ---------- */
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.logo {
+    font-family: NYT;
+    font-size: 5.7em;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.quote {
+    font-size: .7em;
+    background-color: white;
+    border: .2px solid black;
+    padding: 1.5em;
+    font-family: 'Inria Sans', sans-serif;
+    margin: 5vmin 0vmin;
+    text-align: center;
+}
+
+.date {
+    font-size: 1em;
+    text-align: right;
+    align-self: center;
+    font-family: 'Inria Sans', sans-serif;
+}
+
+
+
+/* ---------- */
+/*   navbar   */
+/* ---------- */
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: .8em;
+    border-top: 1.5px solid rgb(168, 168, 168);
+    border-bottom: 1.5px solid rgb(168, 168, 168);
+    padding: 2px 0px;
+}
+
+.issue {
+    text-align: left;
+    width: 13%;
+}
+
+.price {
+    text-align: right;
+    width: 13%;
+}
+
+.navbar {
+    width: 75%;
+    text-align: center;
+}
+
+.nav-links li {
+    list-style: none;
+    display: inline-flex;
+    text-decoration: none;
+    padding-left: 6.5%;
+    padding-left: 6.5%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding: 4.5px;
+}
+
+.active:hover {
+    background-color: rgba(233, 233, 233, 0.567);
+    padding: 4.5px;
+    border-radius: 5px;
+}
+
+
+
+/* ---------- */
+/*   heading  */
+/* ---------- */
+
+.heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin-top: 30px;
+}
+
+.sub-heading {
+    font-family: 'Inria Sans', sans-serif;
+    color: #787878;;
+    font-size: .9em;
+    margin-top: 3px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+
+
+/* ---------- */
+/*   albums   */
+/* ---------- */
+
+.album {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    font-size: 2em;
+    padding-bottom: 15px;
+}
+.under-title {
+    width: 10%;
+}
+
+.title-cover-facts-text {
+    display: block;
+    width: 100%;
+}
+
+.cover-facts-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cover-facts {
+    width: 60%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    border-right: 2px solid rgb(228, 227, 227);
+}
+
+.cover-art {
+    width: 39%;
+}
+
+.cover {
+    width: 100%;
+    height: auto;
+}
+
+.facts-singles {
+    display: block;
+    width: 59%;
+}
+
+.facts1-2 {
+    display: flex;
+}
+
+.facts1 {
+    font-weight: bold;
+    width: 45%;
+    margin: 0 2% 0 0;
+}
+.facts2 {
+    width: 80%;
+    margin:0 2% 0 0;
+}
+
+.facts1, .facts2 {
+    font-family: 'Georgia', serif;
+    font-size: .8em;
+    text-align: left;
+    color: #383838;
+}
+
+.single {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    text-align: left;
+}
+
+.picture {
+    width: 16%;
+    height: auto;
+    margin: 3% 1% 0 0;
+}
+
+.textual {
+    column-count: 3;
+    column-gap: 1em;
+    padding: 10px 0px;
+    width: 38%;
+}
+
+.text {
+    font-family: 'Georgia', serif;
+    font-size: .8em;
+    text-indent: 1.25em;
+    text-align: justify;
+    color: #383838;
+}
+.text:first-of-type::first-letter {
+    font-size: 1.5em;
+}
+
+
+
+/* ---------- */
+/* responsive */
+/* ---------- */
+
+@media screen and (max-width: 1250px) {
+    .quote {
+        font-size: .6em;
+        padding: 1em;
+    }
+    .logo {
+        font-size: 4em;
+    }
+    .heading {
+        font-size: 2.5em;
+    }
+    .sub-heading {
+        font-size: .8em;
+    }
+    .paragraph {
+        column-count: 5;
+    }
+    .text {
+        font-size: .75em;
+    }
+    .description {
+        font-size: .8em;
+    }
+    .cover-facts {
+        width: 70%
+    }
+    .textual {
+        width: 28%;
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .cover-facts {
+        width: 60%;
+    }
+    .textual {
+        width: 38%;
+        column-count: 2;
+    }
+    .cover-art {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .logo {
+        font-size: 3.2em;
+    }
+    .date {
+        font-size: .8em;
+    }
+    .options {
+        font-size: .7em;
+    }
+    .cover-facts {
+        display: block;
+    }
+    .facts-singles {
+        margin: auto;
+    }
+    .cover-facts {
+        width: 75%;
+    }
+    .textual {
+        width: 23%;
+        column-count: 1;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .quote {
+        font-size: .5em;
+        padding: .9em;
+        width: 85%;
+    }
+    .logo {
+        font-size: 2.2em;
+    }
+    .date {
+        font-size: .75em;
+    }
+    .options {
+        font-size: .45em;
+    }
+    .navbar {
+        width: 75%;
+    }
+    .title {
+        font-size: 1.75em;
+    }
+    .text {
+        font-size: .7em;
+    }
+    .cover-facts-text {
+        display: block;
+    }
+    .cover-facts {
+        display: flex;
+        width: 100%;
+    }
+    .textual {
+        width: 100%;
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .quote {
+        display: none;
+    }
+    .date {
+        display: none;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+}
